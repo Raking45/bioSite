@@ -1,0 +1,91 @@
+<!--
+Name: Robert King
+Class: WEB200
+Assignment: 6.2 bioSite
+Date: July 7, 2024
+hobbies.html
+Source Credits: 
+Responsive Navigation & Sidebar: https://www.youtube.com/watch?v=U8smiWQ8Seg
+Infinite Carousel: https://codepen.io/rezaminaee/pen/qeqvaP
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Line for Older Browsers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bioSite</title>
+    <!-- Favicons and Touch Icons -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome SVG Icons -->
+    <script src="https://kit.fontawesome.com/bd243825e7.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts Link (Teko, Kanit, Oswald) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Responsive Sidebar Navigation -->
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <!-- Responsive Main Navigation -->
+        <ul>
+            <li class="logo">Isabella King</li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="hobbies.html">Hobbies</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+        </ul> 
+    </nav>
+    </header>
+    <main>
+        <div class="hero"></div>
+        
+    </main>
+    <!-- Footer Start / .footer1 -->
+    <footer>
+        <div class="footer-wrapper">
+        <ul class="footer1">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <!-- Footer Middle / .footer2 -->
+        <ul class="footer2">
+            <li class="icons1"><a href="https://www.facebook.com/share/PFMebKNYzB815bsp/?mibextid=LQQJ4d" target="_blank" class="facebook"><i class="fa-brands fa-square-facebook"></i></a><a href="https://www.instagram.com/zizzy1778?igsh=bjhzMmEyYTVrcHNr&utmsource=qr" target="_blank" class="instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@koobakat?t=8nhnPEIBW3S&r=1" target="_blank" class="tiktok"><i class="fa-brands fa-tiktok"></i></a><a href="https://snapchat.com/t/AphVyqm8" target="_blank" class="snapchat"><i class="fa-brands fa-square-snapchat"></i></a></li>
+        </ul>
+        <!-- Footer End / .footer3 -->
+        <ul class="footer3">
+            <li>&copy; Copyright 2024</li>
+            <li>All Rights Reserved</li>
+            <li><a href="mailto:raking45@hotmail.com">Robert A. King</a></li>
+        </ul>
+        </div>
+    </footer>
+    <!-- JavaScript for Responsive Navigation and Sidebar -->
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = 'none'
+        }
+    </script>
+    <!-- End JavaScript for Responsive Navigation and Sidebar -->
+</body>
+</html>

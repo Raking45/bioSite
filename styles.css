@@ -1,0 +1,662 @@
+/*
+Name: Robert King
+Class: WEB200
+Assignment: 6.2 bioSite
+Date: July 7, 2024
+styles.css
+Source Credits: 
+Responsive Navigation & Sidebar: https://www.youtube.com/watch?v=U8smiWQ8Seg
+Infinite Carousel: https://codepen.io/rezaminaee/pen/qeqvaP
+*/
+
+/* CSS Resets */
+
+ body, header, nav, ul, li, main, h1, p, img, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+} 
+
+/* HTML Styles */
+
+
+
+/* Body Styles */
+
+body {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+
+header {
+    background-color: #00000093;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px) saturation(1000px);
+    border-radius: 2px;
+    box-shadow: 15px 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Header Nav Styles */
+
+header nav {
+    background-color: #00000093;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #000;
+    border-top: 3px solid #000;
+    position: static;
+}
+
+header nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav li {
+    height: 50px;
+}
+
+header nav li:first-child {
+    margin-right: auto;
+}
+
+header nav .logo {
+    color: #d6249f;
+    display: flex;
+    text-wrap: nowrap;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "kanit";
+    padding-left: 20px;
+    margin-top: -15px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:#b702ff;
+    /* Text Shadows for Neon Flicker Animation */
+    text-shadow: 0 0 4px #fff,
+                0 0 8px #fff,
+                0 0 14px #fff,
+                0 0 42px #c32aff,
+                0 0 82px #c32aff,
+                0 0 92px #c32aff,
+                0 0 102px #c32aff,
+                0 0 151px #c32aff;
+    animation: flicker 3s infinite alternate; 
+}
+
+header nav a {
+    height: 100%;
+    padding: 0 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #b702ff;
+    font-weight: 800;
+    font-size: 30px;
+    font-family: "teko";
+    -webkit-text-stroke: 1px #000000ad;
+}
+
+header nav a:hover {
+    color: #ff00ae;
+    transition: .5s ease;
+    text-shadow: -5px 10px 8px #ebebea; 
+    animation: glow 3s;
+    -webkit-text-stroke: 1px #000000ad;
+}
+
+/* Keyframes for Glow Animation */
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgb(255, 5, 213, 1);
+    }
+
+    15% {
+        text-shadow: 2px 2px 10px rgb(255, 5, 213, 1),
+        -2px -2px 10px rgb(255, 5, 213, 1);
+    }
+
+    30% {
+        text-shadow: 2px 2px 4px rgb(255, 5, 213, .7),
+        -2px -2px 4px rgb(255, 5, 213, .7);
+    }
+
+    50% {
+        text-shadow: 20px 20px 30px rgb(255, 5, 213, .5),
+        -20px -20px 30px rgb(25, 226, 216, .5);
+    }
+}
+
+/*End Logo Glow Animation */
+
+/* Keyframes for Neon Flicker Animation */
+
+ @keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 3px #fff,
+                0 0 6px #fff,
+                0 0 14px #c32aff,
+                0 0 42px #c32aff,
+                0 0 82px #c32aff,
+                0 0 92px #c32aff,
+                0 0 102px #c32aff,
+                0 0 151px #c32aff;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+} 
+
+/* Responsive Sidebar Menu */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #00000093;
+    backdrop-filter: blur(500px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+/* End Responsive Sidebar Menu */
+
+/* Main Styles */
+
+main {
+    display: block;
+}
+
+main .hero {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-content: space-evenly;
+    color: #000;
+    padding-top: 10%;
+}
+
+main .hero span {
+    color: #fff;
+    margin-bottom: auto;
+    padding-top: 10%;
+}
+
+main .hero span p {
+    line-height: 3rem;
+    margin-left: 10%
+}
+
+/* Main .hero1 Styles */
+
+main .hero .hero1 {
+    position: relative;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: "oswald";
+    background: linear-gradient(to right, #d6249f, #c32aff,  #fdfeff);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: -5px 10px 8px #000; 
+    padding-left: 1%;
+    line-height: 3.5rem;
+}
+
+main .hero .hero1 h1 {
+   font-size: 34px;
+}
+
+main .hero .hero1 .quote {
+    font-size: 24px;
+}
+
+/* Main .hero2 Styles */
+
+main .hero .hero2 {
+    padding-top: 2%;
+    
+    margin-top: 1%;
+}
+
+main .hero .hero2 img {
+    display: flex;
+    position: relative;
+    border: 3px groove #000;
+    border-radius: 20px;
+}
+
+/* Main .hero3 Styles */
+
+main .hero .hero3 {
+    color: #fff;
+    position: relative;
+    font-size: 34px;
+    font-weight: 600;
+    font-family: "oswald";
+    background: linear-gradient(to right, #d6249f, #d6249f, #c32aff,  #fdfeff);
+    -webkit-text-fill-color: transparent;
+    text-shadow: -5px 10px 8px #000; 
+    background-clip: text;
+    -webkit-text-stroke: 1px #fff;
+    padding-left: 5%;
+    padding-top: 1%;
+    line-height: 3.5rem;
+}
+
+/* Main .parallax / .mid Styles */
+
+main .parallax {
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* Image Used */
+    background-image: url("./images/space-bglarge-1280x853.jpg");
+    /* Set a Specific Height */
+    min-height: 40vh;
+    /* Create Parallax Scrolling Effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+main .mid {
+    height: 400px;
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+    backdrop-filter: blur(200px) saturate(1000%);
+    -webkit-backdrop-filter: blur(200px);
+    border-radius: 2px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(0, 0, 0);
+    margin: auto;
+    overflow: hidden;
+}
+
+main .mid h1 {
+    text-align: center;
+    padding-top: 1%;
+    font-family: "kanit";
+    text-shadow: -5px 10px 8px #000; 
+    background-clip: text;
+    -webkit-text-stroke: 1px #fff;
+    text-wrap: wrap;
+}
+
+/* Animated Carousel Start */
+
+.slider {
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 1140px;
+    padding-top: 5%;
+}
+
+.slider::before, .slider::after {
+    background: linear-gradient(to right, 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    animation: scroll 180s linear infinite;
+    display: flex;
+    width: calc(450px * 18);
+    text-align: center;
+}
+
+.slider .slide-track h2 {
+    font-size: 48px;
+    font-family: "teko";
+    font-weight: 800;
+    text-shadow: -5px 10px 8px #000; 
+    background-clip: text;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.slider .slide-track:hover {
+    animation-play-state: paused;
+}
+
+.slider .slide {
+    height: 150px;
+    width: 450px; 
+    border: 3px solid #000;
+}
+
+
+.slide:nth-child(1), .slide:nth-child(10) {
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+}
+
+.slide:nth-child(2), .slide:nth-child(11) {
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+}
+
+.slide:nth-child(3), .slide:nth-child(12) {
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+}
+
+.slide:nth-child(4), .slide:nth-child(13) {
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+}
+
+.slide:nth-child(5), .slide:nth-child(14) {
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+}
+
+.slide:nth-child(6), .slide:nth-child(15) {
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+}
+
+.slide:nth-child(7), .slide:nth-child(16) {
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+}
+
+.slide:nth-child(8), .slide:nth-child(17) {
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+}
+
+.slide:nth-child(9), .slide:nth-child(18) {
+    background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-450px * 18));
+    }
+}
+
+/* Animated Carousel End */
+
+/* Main .end Styles */
+
+main .end {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    border: none;
+    text-align: center;
+    align-items: center;
+}
+
+main .end h1 {
+    font-size: 48px;
+    font-family: "oswald";
+    font-weight: 700;
+    color:#d6249f;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:#b702ff;
+    animation: glow 3s infinite; 
+}
+
+/* Footer Styles */
+
+footer {
+    display: flex;
+    width: 100%;
+    background-color: #00000094;
+    width: 100%;
+    z-index: 1;
+    justify-content: space-around;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px) saturation(1000px);
+    border-radius: 2px;
+    box-shadow: 15px 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid rgb(0, 0, 0);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    
+}
+
+.footer-wrapper {
+    display: flex;
+    width: 100%;
+    background-color: #00000094;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #000;
+    border-top: 3px solid rgb(0, 0, 0, 0.1);
+    justify-content: space-around;
+}
+/* Footer Navigation Section Styles */
+
+footer ul li {
+    color: #fff;
+    list-style: none;
+}
+
+footer ul li a {
+   text-decoration: none;
+   color: #b702ff;
+   font-size: 18px;
+}
+
+footer .footer1 a {
+    font-weight: 700;
+    -webkit-text-fill-color: #c32aff;
+    -webkit-text-stroke: 1px rgb(0, 0, 0, .5);
+}
+
+footer .footer1 a:hover {
+    transition: .5s ease;
+    text-shadow: -3px 5px 6px #ebebea;
+    animation: glow 3s;
+    -webkit-text-fill-color: #ff00ae;
+    -webkit-text-stroke: 1px #000000ad;
+}
+
+/* Footer Social Media Icon Styles */
+
+footer .footer2 .icons1 {
+    margin-bottom: 5px;
+}
+
+footer ul li .facebook {
+    color: #3b5998;
+    font-size: 24px;
+    padding: 5px 20px;
+}
+
+footer ul li .facebook:hover {
+    transition: .5s ease;
+    text-shadow: -3px 5px 6px #ebebea56;
+}
+
+footer ul li .instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 24px;
+    padding: 5px 20px;
+}
+
+footer ul li .instagram:hover {
+    transition: .5s ease;
+    text-shadow: -5px 3px 4px #ebebea56;
+}
+
+footer ul li .tiktok {
+    font-size: 24px;
+    padding: 5px 20px;
+    color: #111111;
+    filter: drop-shadow(1px 0px 0px #fd3e3e) drop-shadow(-1px -1px 0px #4de8f4);
+}
+
+footer ul li .tiktok:hover {
+    transition: .5s ease;
+    text-shadow: -5px 3px 4px #ebebea1e;
+}
+
+footer ul li .snapchat {
+    font-size: 24px;
+    padding: 5px 20px;
+    background: #fffc00;
+    background: linear-gradient(to right, #fffc00, #fff);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+footer ul li .snapchat:hover {
+    transition: .5s ease;
+    text-shadow: -5px 3px 4px #ebebea56;
+}
+
+/* Footer Copyright / Author Styles */
+
+footer .footer3 {
+    margin-top: 7px;
+    text-align: center;
+}
+
+footer .footer3 li {
+    font-size: 14px;
+}
+
+footer .footer3 a {
+    font-size: 12px;
+    -webkit-text-fill-color: #b702ff;
+    -webkit-text-stroke: .1px rgba(255, 255, 255, 0.5);
+}
+
+footer .footer3 a:hover {
+    transition: .5s ease;
+    text-shadow: -2px 2px 8px #ebebea;
+    animation: glow 3s infinite;
+    -webkit-text-fill-color: #ff00ae;
+    -webkit-text-stroke: .1px #ffffffad;
+}
+
+footer p {
+    padding-top: 15px;
+}
+
+/* Media Queries */
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 480px) {
+   
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+    footer {
+        flex-direction: column;
+      }
+    main .hero {
+        flex-direction: column;
+        padding-top: 20%;
+    }
+    main .hero .hero1 {
+        text-align: center;
+        font-size: 22px;
+        padding-top: 5%;
+        justify-items: center;
+    }
+    main .hero .hero2 img {
+       justify-items: center;
+    }
+    main .hero .hero3 {
+        font-size: 22px;
+        padding-left: 3%;
+        text-align: center;
+        justify-items: center;
+    }
+    main .parallax {
+        background-image: url("./images/space-bgmobile-481x853.jpg")
+    }
+}
+
+/* Media Query for iPads and Tablets */
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+    main .parallax {
+        background-image: url("./images/space-bgmedium-768x853.jpg")
+    }
+    
+}
+
+/* Media Query for Laptops and Small Screens */
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    main .parallax {
+        background-image: url("./images/space-bglarge-1024x853.jpg");
+    }
+    
+}
+
+/* Media Query for Large Screens and Desktops */
+
+@media only screen and (max-width: 1200px) and (min-width:1025px) {
+    .sidebar {
+        width: 100%;
+    }
+   
+}
+
+/* Media Query for TV and Extra Large Screens */
+
+@media only screen and (min-width: 1201px) {
+    .sidebar {
+        width: 100%;
+    }
+   
+}
