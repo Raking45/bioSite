@@ -2,13 +2,12 @@
 Name: Robert King
 Class: WEB200
 Assignment: 6.2 bioSite
-Date: July 7, 2024
-about.html
-Source Credits: 
+Date: July 16, 2024
+template.html
+Source Credits:
 Responsive Navigation & Sidebar: https://www.youtube.com/watch?v=U8smiWQ8Seg
 Infinite Carousel: https://codepen.io/rezaminaee/pen/qeqvaP
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +17,7 @@ Infinite Carousel: https://codepen.io/rezaminaee/pen/qeqvaP
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>bioSite</title>
     <!-- Favicons and Touch Icons -->
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome SVG Icons -->
@@ -30,7 +27,7 @@ Infinite Carousel: https://codepen.io/rezaminaee/pen/qeqvaP
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="about">
     <header>
         <!-- Responsive Sidebar Navigation -->
     <nav>
@@ -47,32 +44,112 @@ Infinite Carousel: https://codepen.io/rezaminaee/pen/qeqvaP
             <li class="hideOnMobile"><a href="hobbies.html">Hobbies</a></li>
             <li class="hideOnMobile"><a href="about.html">About</a></li>
             <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa-solid fa-bars"></i></a></li>
-        </ul> 
+        </ul>
     </nav>
     </header>
     <main>
-        <div class="hero"></div>
-        
+        <div class="timeline">
+            <div class="container left-container">
+                <img class="image1" src="./images/earlyyears1.JPG" alt="young girl holding a fish">
+                <div class="text-box">
+                    <h2>Beginnings</h2>
+                    <p>Hello, my name is Isabella King, and I was born on October 10, 2006.  I lived in Eldora, Iowa for the first 12 years.  Eldora is a small midwestern town with a population of approximately 2,000 located in between Ames, Iowa and Waterloo, Iowa.</p>
+                    <span class="left-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container right-container">
+                <img class="image2" src="./images/llamababy.JPG" alt="baby llama">
+                <div class="text-box">
+                    <h2>Early Years</h2>
+                    <p>Even though I lived in a small town I always found ways to stay entertained.  I often visited my grandmother's on her farm or would hang out with friends at the pool, or carnival and fairs when they arrived.  Most of my days were spent outside enjoying the warm summers or playing in the snow during the winter.</p>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container left-container">
+                <img class="image3" src="./images/llamashow.JPG" alt="llama awards ceremony">
+                <div class="text-box">
+                    <h2>Elementary School</h2>
+                    <p>I attended elementary school in Eldora, Iowa and had several friends, some of whom I still remain in contact with.  One such friend is Jayla, whom I still to this day consider to be my best friend even though we now live several states apart from each other.  During this time I was introduced to showing llamas and soon began attending every event possible.  I loved showing them, not so much practicing all the time, but I quickly brought home a vast number of ribbons, medals, and trophies.</p>
+                    <span class="left-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container right-container">
+                <img class="image4" src="./images/nightprep1.jpg" alt="telescope" width="150">
+                <div class="text-box">
+                    <h2>Activities I Enjoyed During Elementary School</h2>
+                    <ul>
+                        <li>Showing Llamas</li>
+                        <li>Hiking around Pine Lake</li>
+                        <li>Fishing</li>
+                        <li>Tubing on the River</li>
+                        <li>Learning Astronomy</li>
+                        <li>Playing Soccer</li>
+                        <li>Playing Volleyball</li>
+                    </ul>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container left-container">
+                <img class="image5" src="./images/workingwdadagrandpa.jpg" alt="young girl digging">
+                <div class="text-box">
+                    <h2>Middle School (Eldora, Iowa)</h2>
+                    <p>The middle school years proved more difficult because my father and mother divorced, and my father moved away to West Virginia.  I spent the next couple of years living with my mother and would visit my father during Christmas.  At the end of sixth grade my father gained custody and I moved to Morgantown, West Virginia.</p>
+                    <span class="left-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container right-container">
+                <img class="image6" src="./images/sittingflowers.jpg" alt="young girl sitting in a field of flowers">
+                <div class="text-box">
+                    <h2>Middle School (Morgantown, West Virginia)</h2>
+                    <p>After moving to Morgantown, West Virginia I had a difficult time adjusting to my new school.  This was made even more difficult due the the COVID-19 pandemic, which began during the last semester of seventh grade.  Eigth grade proved extremely difficult since it was online, and I discovered I had very little motivation for online schooling.</p>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container left-container">
+                <img class="image7" src="./images/waterfallhike.jpg" alt="girl standing in front of a waterfall">
+                <div class="text-box">
+                    <h2>High School</h2>
+                    <p>Ninth grade was difficult since I didn't feel like I belonged to any group and had a great deal of trouble making any friends.  My father decided that we should move to another school district as soon as my Freshman year was over.  This decision turned out to be great.  Immediately after attending my new school I began making friends that I could hang out with after school.  I also enjoy all of my classes and teachers at the new High School.</p>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container right-container">
+                <img class="image8" src="./images/hotairballon.jpg" alt="hot air ballon show">
+                <div class="text-box">
+                    <h2>Just the Beginning of A Cosmic Adventure</h2>
+                    <p>I have now begun focusing on obtaining some work experience by working at Kroger part-time.  I spend my days studying, working, and hanging out with my friends whenever possible.  Even with all of the ups and downs I have managed to maintain a 4.12 GPA and am planning on taking an off-year before attending college.  I am not certain yet about what I want to major in so I will most likely just do an undecided major.  I am ready and excited to continue my cosmic adventure and to discover new wonders.</p>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- Footer Start / .footer1 -->
     <footer>
         <div class="footer-wrapper">
-        <ul class="footer1">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="hobbies.html">Hobbies</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+            <div class="footer1">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
         <!-- Footer Middle / .footer2 -->
-        <ul class="footer2">
-            <li class="icons1"><a href="https://www.facebook.com/share/PFMebKNYzB815bsp/?mibextid=LQQJ4d" target="_blank" class="facebook"><i class="fa-brands fa-square-facebook"></i></a><a href="https://www.instagram.com/zizzy1778?igsh=bjhzMmEyYTVrcHNr&utmsource=qr" target="_blank" class="instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
-            <li><a href="https://www.tiktok.com/@koobakat?t=8nhnPEIBW3S&r=1" target="_blank" class="tiktok"><i class="fa-brands fa-tiktok"></i></a><a href="https://snapchat.com/t/AphVyqm8" target="_blank" class="snapchat"><i class="fa-brands fa-square-snapchat"></i></a></li>
-        </ul>
+            <div class="footer2">
+                <ul>
+                    <li class="icons1"><a href="https://www.facebook.com/share/PFMebKNYzB815bsp/?mibextid=LQQJ4d" target="_blank" class="facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/zizzy1778?igsh=bjhzMmEyYTVrcHNr&utmsource=qr" target="_blank" class="instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li class="icons2"><a href="https://www.tiktok.com/@koobakat?t=8nhnPEIBW3S&r=1" target="_blank" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://snapchat.com/t/AphVyqm8" target="_blank" class="snapchat"><i class="fa-brands fa-square-snapchat"></i></a></li>
+                </ul>
+            </div>
         <!-- Footer End / .footer3 -->
-        <ul class="footer3">
-            <li>&copy; Copyright 2024</li>
-            <li>All Rights Reserved</li>
-            <li><a href="mailto:raking45@hotmail.com">Robert A. King</a></li>
-        </ul>
+            <div class="footer3">
+                <ul>
+                    <li>&copy; Copyright 2024</li>
+                    <li>All Rights Reserved</li>
+                    <li><a href="mailto:raking45@hotmail.com">Robert A. King</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
     <!-- JavaScript for Responsive Navigation and Sidebar -->
