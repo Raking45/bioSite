@@ -385,6 +385,10 @@ main .hero-start .hero2 {
   justify-content: center;
 }
 
+main .hero-start .hero-img2 {
+  width: 190px;
+}
+
 main .hero-start .hero2 img {
   display: flex;
   position: relative;
@@ -441,7 +445,7 @@ main .mid {
   overflow: hidden;
 }
 
-main .hero-middle h1 {
+main .hero-middle h1, h2 {
   text-align: center;
   padding-top: 1%;
   font-family: "kanit";
@@ -451,6 +455,10 @@ main .hero-middle h1 {
   background-clip: text;
   -webkit-text-stroke: 1px #ebebea;
   text-wrap: wrap;
+}
+
+main .hero-middle h2 {
+  font-size: 30px;
 }
 
 /* Animated Carousel Start */
@@ -598,6 +606,65 @@ main .hero-end h1 a:hover {
 }
 
 
+
+main .hero-intro {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: #fff;
+}
+
+main .hero-intro1 {
+  display: block;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6249f;
+  border: 5px solid #285AEB;
+  border-radius: 10px;
+  border-style: double;
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+main .hero-intro1 section {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: justify;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 10px 15px;
+  font-family: "oswald";
+  text-indent: 20px;
+  line-height: 1.8em;
+}
+
+main .hero-intro2 {
+  display: block;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #b702ff;
+  border: 5px solid #285AEB;
+  border-radius: 10px;
+  border-style: double;
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+main .hero-intro2 section {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: justify;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 10px 15px;
+  font-family: "oswald";
+  text-indent: 20px;
+  line-height: 1.8em;
+}
+
+
 /* End Main Styles */
 
 /* Footer Styles */
@@ -711,6 +778,126 @@ footer .snapchat:hover {
   z-index: -999;
 }
 
+main .hero-start section {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  text-align: left;
+  justify-content: space-between;
+  align-content: space-evenly;
+  font-size: 28px;
+  display: flex;
+  width: 100%;
+  text-indent: 50px;
+  margin: 10px 50px;
+}
+
+main .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0;
+  padding-bottom: 25px;
+}
+
+main .gallery .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+main .gallery img {
+  height: 400px;
+  border: 3px groove #d6249f;
+  border-radius: 15px;
+  box-shadow: 4px 3px 8px #c32aff;
+  padding: 1px 1px;
+}
+
+main .gallery figcaption {
+  color: #fff;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hobbies  h1, h2, h3 {
+  width: 100%;
+  text-align: center;
+  padding-top: 1%;
+  font-family: "kanit";
+  background: linear-gradient(45deg, #d6249f, #c32aff, #285AEB, #000);
+  -webkit-text-fill-color: transparent;
+  text-shadow: -5px 10px 8px #000;
+  background-clip: text;
+  -webkit-text-stroke: 1px #ebebea;
+  text-wrap: wrap;
+}
+
+main .game {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+main .game .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+main .game iframe {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 11.5%
+}
+
+
+main .music iframe {
+  opacity: .8;
+  box-shadow: 1px 2px 2px #c32aff;
+  border: 3px solid #ff00ae;
+}
+
+
+main .movie .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+main .book {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-content: space-evenly;
+  margin-top: 0;
+  padding-bottom: 25px;
+}
+
+main .book .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
 /* End hobbies.html Styles */
 
 /* Start about.html Styles */
@@ -802,6 +989,10 @@ footer .snapchat:hover {
   color: #fff;
 }
 
+main .text-box h2 {
+  font-family: "kanit";
+}
+
 .left-container {
   left: 0%;
   padding: 0;
@@ -822,16 +1013,6 @@ footer .snapchat:hover {
   border-radius: 25px;
   transition: transform .5s;
 }
-
-/*.left-container img {
-  right: -275px;
-  left: 105%;
-
-}
-
-.right-container img {
-  left: -175px;
-}*/
 
 .image1 {
   height: 150px;
