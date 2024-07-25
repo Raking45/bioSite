@@ -1,8 +1,8 @@
 /*
 Name: Robert King
 Class: WEB200
-Assignment: 6.2 bioSite
-Date: July 16, 2024
+Assignment: 9.2 bioSite
+Date: July 25, 2024
 styles.css
 Source Credits:
 Responsive Navigation & Sidebar: https://www.youtube.com/watch?v=U8smiWQ8Seg
@@ -20,43 +20,73 @@ Infinite Carousel: https://codepen.io/rezaminaee/pen/qeqvaP
   header nav li.menu-button {
       display: block;
   }
+  main .timeline {
+    margin: 50px auto;
+  }
+
+  main .timeline::after {
+    left: 31px;
+  }
+
+  main .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+
+  main .text-box {
+    width: 50%;
+    font-size: 14px;
+  }
+
+  main .right-container {
+    left: 0;
+    margin: 10px auto;
+
+  }
+
+  main .left-container {
+    margin: 10px auto;
+  }
+
+  main .left-container img, .right-container img {
+   display: none;
+  }
+
+  main .left-container-arrow, .right-container-arrow {
+    border-right: 15px solid #acabab;
+    border-left: 0;
+    left: -15px;
+  }
+
+  main .hero-intro  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align:left;
+  }
+  main .hero-start .hero1 p {
+    font-size: 22px;
+    line-height: 1.5em;
+  }
+  main .hero-intro .hero-intro1 {
+    width: 100%;
+    background:#d6249f;
+  }
+
+  main .hero-intro .hero-intro2 {
+    width: 100%;
+    background:#d6249f;
+  }
+
 }
 
 /* Media Query for about.html Timeline */
 
-@media screen and (max-width: 600px){
-  .timeline {
-      margin: 50px auto;
-  }
 
-  .timeline::after {
-      left: 31px;
-  }
-
-  .container {
-      width: 100%;
-      padding-left: 80px;
-      padding-right: 25px;
-  }
-
-  .text-box {
-      font-size: 14px;
-  }
-
-  .right-container {
-      left: 0;
-  }
-
-  .left-container img, .right-container img {
-      left: 10px;
-  }
-
-  .left-container-arrow, .right-container-arrow {
-      border-right: 15px solid #acabab;
-      border-left: 0;
-      left: -15px;
-  }
-}
 
 /* Media Query for iPads and Tablets */
 
@@ -94,9 +124,20 @@ Infinite Carousel: https://codepen.io/rezaminaee/pen/qeqvaP
   }
 }
 
+@media print {
+  header, nav, iframe, .hero2, .slider, .game, small, a, br, hr, footer {
+    display: none;
+  }
+
+  .hobbies .game iframe {
+    display: none;
+  }
+
+}
+
 /* CSS Resets */
 
-body, header, nav, ul, li, a, main, h1, h2, h3, p, section, img, footer {
+body, header, nav, ul, li, a, main, h1, h2, h3, p, section, img, iframe, footer {
   margin: 0;
   padding: 0;
   border: 0;
@@ -357,7 +398,7 @@ main .hero-start span p {
 
 main .hero-start .hero1 {
   position: relative;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 800;
   font-family: "oswald";
   background: linear-gradient(45deg, #d6249f, #c32aff, #285AEB, #000);
@@ -367,7 +408,6 @@ main .hero-start .hero1 {
   text-shadow: -5px 10px 8px #000;
   line-height: 3.5rem;
   padding-bottom: 25px;
-  padding-left: 5%;
 }
 
 main .hero-start .hero1 h1 {
@@ -413,7 +453,6 @@ main .hero-start .hero3 {
   background-clip: text;
   -webkit-text-stroke: 1px #ebebea;
   padding-top: 25px;
-  padding-right: 5%;
   line-height: 3.5rem;
   text-align: center;
 }
@@ -619,7 +658,7 @@ main .hero-intro1 {
   width: 50%;
   align-items: center;
   justify-content: center;
-  background-color: #d6249f;
+  background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
   border: 5px solid #285AEB;
   border-radius: 10px;
   border-style: double;
@@ -627,7 +666,7 @@ main .hero-intro1 {
   margin: 10px 10px;
 }
 
-main .hero-intro1 section {
+main .hero-intro1 p {
   display: flex;
   flex-wrap: wrap;
   text-align: justify;
@@ -644,7 +683,7 @@ main .hero-intro2 {
   width: 50%;
   align-items: center;
   justify-content: center;
-  background-color: #b702ff;
+  background: linear-gradient(345deg,#c32aff, #285AEB, #d6249f, #ff10f0);
   border: 5px solid #285AEB;
   border-radius: 10px;
   border-style: double;
@@ -652,7 +691,7 @@ main .hero-intro2 {
   margin: 10px 10px;
 }
 
-main .hero-intro2 section {
+main .hero-intro2 p {
   display: flex;
   flex-wrap: wrap;
   text-align: justify;
@@ -778,18 +817,20 @@ footer .snapchat:hover {
   z-index: -999;
 }
 
-main .hero-start section {
-  display: flex;
-  flex-wrap: wrap;
-  color: #fff;
-  text-align: left;
-  justify-content: space-between;
-  align-content: space-evenly;
-  font-size: 28px;
-  display: flex;
-  width: 100%;
+main .about-intro p {
+  position: relative;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: "oswald";
+  background: linear-gradient(45deg, #d6249f, #c32aff, #285AEB, #000);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 1px #ebebea;
+  text-shadow: -5px 10px 8px #000;
+  line-height: 3.5rem;
+  padding-bottom: 25px;
+  padding-left: 5%;
   text-indent: 50px;
-  margin: 10px 50px;
 }
 
 main .gallery {
@@ -819,11 +860,13 @@ main .gallery img {
 }
 
 main .gallery figcaption {
-  color: #fff;
+  color:#fff;
   text-align: left;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "oswald";
+  font-size: 16px;
 }
 
 .hobbies  h1, h2, h3 {
@@ -860,11 +903,23 @@ main .game iframe {
   margin-left: 11.5%
 }
 
+main .music {
+  width: 100%;
+}
 
 main .music iframe {
   opacity: .8;
   box-shadow: 1px 2px 2px #c32aff;
   border: 3px solid #ff00ae;
+}
+
+main .music1 iframe {
+  width: 100%;
+}
+
+main .music2 iframe {
+  width: 100%;
+  margin-bottom: 25px;
 }
 
 
@@ -896,6 +951,18 @@ main .book .row {
   align-items: center;
   justify-content: center;
   gap: 50px;
+}
+
+main .music h2 {
+  font-size: 28px;
+}
+
+main .movie h2 {
+  font-size: 28px;
+}
+
+main .book h2 {
+  font-size: 28px;
 }
 
 /* End hobbies.html Styles */
